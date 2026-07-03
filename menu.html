@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú | Alke Wallet</title>
+    <title>Menu | Alke Wallet</title>
 
     <!--FontAwesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -37,55 +37,62 @@
     </header>
     <main>
         <section>
-            <div class="container main-container">
-                <div class="row justify-content-center">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
 
-                    <div id="mensaje"></div>
-                    <div class="card p-4 shadow menu-card">
+                    <div class="card shadow-sm menu-card">
                         <h2 class="mb-4 saldo-title text-center">Saldo disponible</h2>
-                        <div>
-                            <form id="form-login" action="">
-
-                                <div class="mb-3 text-start">
-                                    <label for="Usuario" class="form-label">Usuario</label>
-                                </div>
-
-                                <div class="mb-3 text-start">
-                                    <label for="password" class="form-label">Contraseña</label>
-                                </div>
-
-                                <button class="btn-menu mt-3">Depositar</button>
-                            </form>
-                        </div>
-                        <div>
-                            <p class="text-center pt-3"><a href="transaction.html">Transferir</a></p>
-                        </div>
-
-                    </div>
-                    <div class="flecha-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-arrow-up-short" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5" />
-                        </svg>
+                        <span class="saldo-valor text-center">$300.000</span>
+                        <p class="saldo-actual text-center">Tu saldo actual</p>
                     </div>
                 </div>
             </div>
-            </div>
-            <section>
-                <section>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col text-center">
-                                <ul>
-                                    <li>Rápido</li>
-                                    <li>Seguro</li>
-                                    <li>Asistencia 24/7</li>
-                                </ul>
+        
+                <div class="row-gap-3 justify-content-center mt-4">
+                    <div class="col-12 start-text">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h3>Depositar</h3>
+                                    <p>Agrega dinero a tu cuenta</p>
+                                    <a href="deposit.html" class="btn btn-success">Depositar</a>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+                <div class="row-gap-3 justify-content-center mt-4">
+                    <div class="col-12 start-text">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4>Transferir</h4>
+                                <p>Envía dinero a otros usuarios</p>
+                                <a href="sendmoney.html" class="btn btn-primary">Transferir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-gap-3 justify-content-center mt-4">
+                    <div class="col-12 start-text">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4>Historial de transferencias</h4>
+                                <p>Consulta tus movimientos bancarios</p>
+                                <a href="transaction.html" class="btn btn-primary">Ver historial</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col text-center">
+                            <ul>
+                                <li>Rápido</li>
+                                <li>Seguro</li>
+                                <li>Asistencia 24/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
     </main>
 
 
@@ -114,40 +121,40 @@
             const usuario = document.getElementById("usuario").value;
             const password = document.getElementById("password").value;
 
-            let usuarios =JSON.parse(localStorage.getItem("usuarios")) ||[];
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-            const usuarioEncontrado = usuarios.find(function(u) {
+            const usuarioEncontrado = usuarios.find(function (u) {
                 return u.usuario === usuario && u.password === password;
             });
-        
+
 
             if (usuarioEncontrado) {
-            localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
+                localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
 
-            document.getElementById("mensaje").innerHTML = `
+                document.getElementById("mensaje").innerHTML = `
             <div class="alert alert-sucess alert-dismissible fade show">
             Inicio de sesión exitoso.
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         `;
-        
-        setTimeout(() => {
-                window.location.href = "menu.html";
-            }, 2000);
 
-    } else {
-            document.getElementById("mensaje").innerHTML = `
+                setTimeout(() => {
+                    window.location.href = "menu.html";
+                }, 2000);
+
+            } else {
+                document.getElementById("mensaje").innerHTML = `
             <div class="alert alert-danger alert-dismissible fade show">
             Usuario y/o contraseña incorrectos.
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         `;
 
-            setTimeout(() => {
-                window.location.href = "login.html";
-            }, 3500);
+                setTimeout(() => {
+                    window.location.href = "login.html";
+                }, 3500);
 
-        }
+            }
 
         });
     </script>

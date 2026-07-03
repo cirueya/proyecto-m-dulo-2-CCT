@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Share+Tech&display=swap');
 
-header .header-container{
+
+/* Entendí muy tarde cómo avanzar, y ya para que quede más bonito y manejable no alcanzo, mi meta solo era alcanzar a subir aunque sea un avance */
+
+
+/* ---------------------
+----    INICIAL     ----
+----------------------*/
+
+
+header .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,37 +17,38 @@ header .header-container{
     gap: 20px;
 }
 
-.brand{
+.brand {
     display: flex;
     align-items: center;
     gap: 80px;
 }
-.search-box{
+
+.search-box {
     display: flex;
     align-items: center;
     gap: 100px;
     height: auto;
 }
 
-.search-box input{
+.search-box input {
     width: 180px;
 }
 
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-input[type="search"]{
+input[type="search"] {
     margin-bottom: 6px;
     height: 35px;
     width: 200px;
     border-radius: 10px;
 }
 
-body{
-    background: linear-gradient(150deg ,rgb(246, 153, 228), rgb(0, 0, 0));
+body {
+    background: linear-gradient(150deg, rgb(246, 153, 228), rgb(0, 0, 0));
     color: white;
     margin-top: 80px;
     font-family: Arial, Helvetica, sans-serif;
@@ -46,30 +56,30 @@ body{
     overflow-x: hidden;
 }
 
-svg{
+svg {
     color: aqua;
     opacity: 60%;
     height: auto;
 }
 
-h1{
+h1 {
     color: rgba(112, 58, 161, 0.721);
     font-size: 35px;
 }
 
-h2{
+h2 {
     margin: 10px;
     font-size: 35px;
 }
 
-main{
+main {
     min-height: 8px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    padding: 3rm;
+    padding: 3rem;
 }
 
 body.register-page main {
@@ -96,23 +106,26 @@ body.login-page main {
 }
 
 @keyframes moverFlecha {
-    0%{
+    0% {
         transform: translateY(0);
     }
-    50%{
+
+    50% {
         transform: translateY(10px);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 }
 
 /*busqué tipo de animación en redes para la flecha y para el cambio de color de los botones*/
-a{
+a {
     margin: 5px 8px;
 }
 
-.btn-btn-success, .btn-btn-primary{
+.btn-btn-success,
+.btn-btn-primary {
     color: rgb(253, 208, 216);
     background-color: palevioletred;
     padding: 13px;
@@ -127,28 +140,30 @@ a{
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.btn-btn-primary:hover{
+.btn-btn-primary:hover {
     background-color: aqua;
     color: rgba(0, 0, 0, 0.728);
 }
-.btn-btn-success:hover{
+
+.btn-btn-success:hover {
     background-color: aqua;
     color: rgba(0, 0, 0, 0.729);
 }
 
-footer{
+footer {
     background-color: rgb(51, 25, 53);
-    height: 150px;
+    min-height: 150px;
+    height: auto;
     width: 100%;
     line-height: 29px;
     font-size: 100%;
 }
 
-p{
+p {
     color: rgb(222, 212, 221);
 }
 
-ul{
+ul {
     display: flex;
     font-size: 20px;
     justify-content: center;
@@ -159,25 +174,27 @@ ul{
     gap: 20px;
 }
 
-hr{
+hr {
     opacity: 60%;
 }
 
-@media (max-width: 576px){
-    ul{
+@media (max-width: 576px) {
+    ul {
         flex-direction: column;
     }
 }
 
-i{
+i {
     color: rgb(120, 39, 130);
     font-size: 20px;
 }
 
-/*me quedó bonito ah, ni yo sabía que me podía quedar así de fachero*/
+/* ---------------------
+-------- REGISTER ------
+----------------------*/
 
 .register-card {
-    background-color: rgba(255,255,255,0.12) !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
     border: none !important;
     color: white;
     margin: auto;
@@ -186,19 +203,7 @@ i{
     justify-content: center;
     width: 387px;
     height: 600px;
-    margin: auto;
-}
-
-.login-card {
-    background-color: rgba(255,255,255,0.12) !important;
-    border: none !important;
-    color: white;
-    margin: auto;
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-    justify-content: center;
-    width: 387px;
-    height: 600px;  
+    height: auto;
     margin: auto;
 }
 
@@ -222,7 +227,7 @@ i{
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.btn-register:hover{
+.btn-register:hover {
     background-color: aqua;
     color: rgba(0, 0, 0, 0.728);
 }
@@ -230,6 +235,8 @@ i{
 button.btn-register {
     border: none !important;
 }
+
+/*----- register dentro de la registerTARJETA -----*/
 
 .register-card input {
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -247,7 +254,23 @@ button.btn-register {
 
 /* me faltó tiempo :( */
 
-/* login */
+/* ---------------------
+-------- LOGIN ----------
+----------------------*/
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.193) !important;
+    border: none !important;
+    color: white;
+    margin: auto;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    max-height: 600px;
+    margin: auto;
+}
 
 .login-card label {
     margin-bottom: 5px;
@@ -269,7 +292,7 @@ button.btn-register {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.btn-login:hover{
+.btn-login:hover {
     background-color: aqua;
     color: rgba(0, 0, 0, 0.728);
 }
@@ -277,6 +300,8 @@ button.btn-register {
 button.btn-login {
     border: none !important;
 }
+
+/*----- login dentro de la loginTARJETA -----*/
 
 .login-card input {
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -292,41 +317,56 @@ button.btn-login {
     color: rgba(0, 0, 0, 0.333);
 }
 
-/* MENU */
+/* ----------------------
+--------- MENU ----------
+-----------------------*/
+
+.menu-card, 
+.shadow-sm {
+    background-color: rgba(255, 255, 255, 0.432) !important;
+    border: none !important;
+    color: white;
+    margin: auto;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    width: auto;
+    min-height: 250px;
+    height: auto;
+}
 
 .menu-card label {
     margin-bottom: 5px;
     color: white;
 }
 
-.btn-menu {
+.btn-success, 
+.btn-primary {
     color: rgb(253, 208, 216);
     background-color: palevioletred;
     display: block;
     margin: 20px auto;
-    padding: 10px;
+    padding: 13px;
     height: 50px;
-    width: 150px;
+    min-height: 100%;
+    min-width: 20px;
     text-decoration: none;
-    justify-content: center;
     font-size: 16px;
     border-radius: 8px;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    border: none;
 }
 
-.btn-menu:hover{
+.btn-success:hover, .btn-primary:hover {
     background-color: aqua;
     color: rgba(0, 0, 0, 0.728);
 }
 
-button.btn-menu {
-    border: none !important;
-}
+/*----- diseño de la menuTARJETA -----*/
 
 .menu-card input {
     border: 1px solid rgba(255, 255, 255, 0.4);
     font-size: 18px !important;
-    width: 300px;
+    width: 100%;
     border-radius: 8px;
     padding: 5px;
     margin: 5px;
@@ -334,14 +374,57 @@ button.btn-menu {
 }
 
 .menu-card input::placeholder {
-    color: rgba(0, 0, 0, 0.333);
+    color: rgba(22, 21, 21, 0.333);
 }
 
-/* entendí muy tarde como trabajar, el tiempo me alcanzó*/ 
+
+/* ---- color letras DENTRO DE LA TARJETA -----*/
 
 
 .saldo-title {
-    color: #652054;
+    margin-top: 30px;
+    color: #841b6a;
     opacity: 80%;
 }
 
+.saldo-valor {
+    color: #511b44;
+    opacity: 80%;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.saldo-actual {
+    color: #433b41;
+    opacity: 80%;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.shadow-sm{
+    
+    background-color: rgba(255, 255, 255, 0.432) !important;
+    color: #511b44;
+    margin: auto;
+    border-radius: 20px;
+    width: 100%;
+    min-height: 250px;
+}
+
+.shadow-sm p{
+
+    color: #433b41;
+    opacity: 80%;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ---------------------
+---- SENDMONEY - ENVIAR DINERO ------
+----------------------*/
+
+
+/* ---------------------
+------ TRANSACTION -----
+----------------------*/
